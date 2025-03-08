@@ -1,0 +1,6 @@
+.homePage {
+    display: flex;
+    width: 1440px;
+    height: 67px;
+    align-items: center;
+}
