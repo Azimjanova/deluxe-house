@@ -1,0 +1,61 @@
+
+
+body{
+    background: black;
+}
+
+
+.container{
+    width: 1170px;
+    margin:  auto;
+    /*border: 1px solid red;*/
+}
+
+
+.img{
+    width: 370px;
+    height: 384px;
+}
+
+.h1{
+    font-size: 40px;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid grey;
+    color: white;
+    font-weight: 400;
+    width: 1170px;
+    margin: auto;
+}
+
+.name{
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    line-height: 100%;
+    font-weight: 700;
+}
+
+.desc{
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 100%;
+    font-weight: 400;
+}
+
+.buttons{
+    margin: 100px auto;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    button{
+        padding: 23px 53px;
+        border-radius: 10px;
+        border: 1px solid white;
+        background: transparent;
+        margin-left: 85px;
+    }
+}

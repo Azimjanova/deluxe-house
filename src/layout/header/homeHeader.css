@@ -1,0 +1,105 @@
+.home-header {
+    display: flex;
+    width: 1440px;
+    height: 75px;
+    align-items: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    color: white;
+    margin: 0 auto;
+    background: black;
+}
+
+
+.home-content {
+    position: relative;
+    display: flex;
+    gap: 40px;
+
+
+    a {
+        text-decoration: none;
+        position: relative;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+    }
+}
+
+a:after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    left: 0;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: white;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    transform: translateY(-5px);
+
+}
+
+a:hover:after {
+    width: 100%;
+}
+
+/*.cursor{*/
+/*    cursor: pointer;*/
+/*    width: 50px;*/
+/*    height: 2px;*/
+/*    background-color: #f9f9f9;*/
+/*    position: absolute;*/
+/*    margin-top: 30px;*/
+/*    transition: all 0.3s ease-in-out;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+
+
+.textDelux {
+    display: grid;
+    font-family: "Playfair Display", serif; /* Шрифт */
+    font-weight: 600;
+}
+
+.numberIcon {
+    display: flex;
+    gap: 10px;
+}
+
+.imgHeader {
+    width: 1345px;
+    height: 683px;
+    margin-left: -72px;
+    margin-top: -704px;
+}
+
+.loco2{
+    margin-left: -50px;
+    position: absolute;
+}
+
+.home-header-left{
+    display: grid;
+    background-color: black;
+    color: white;
+    width: 96px;
+    height: 694px;
+    margin-left: -120px;
+    p{
+        writing-mode: vertical-lr; /* Вертикальное письмо, справа налево */
+        text-orientation: mixed; /* Ориентация текста */
+        color: rgba(225, 222, 206, 1);
+        margin-top: 100px;
+        margin-left: 50px;
+
+    }
+}
