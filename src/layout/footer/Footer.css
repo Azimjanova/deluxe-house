@@ -1,0 +1,15 @@
+.footer-container {
+  position: relative;
+  margin-top: 100px;
+}
+
+.footer-container::before {
+  /*content: '';*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: -50vw;*/
+  /*width: 200vw;*/
+  /*height: 2px; !* Или другая желаемая высота *!*/
+  /*background-color: #e1dece; !* Цвет границы *!*/
+  /*margin: auto;*/
+}
