@@ -1,0 +1,70 @@
+.studioImgs {
+  display: flex;
+  gap: 20px;
+  width: 259px;
+  height: 608px;
+  .div1 {
+    width: 265px;
+    height: 24px;
+    background: black;
+    margin-top: 408px;
+    position: absolute;
+  }
+  .div2 {
+    width: 265px;
+    height: 24px;
+    background: black;
+    margin-top: 240px;
+    position: absolute;
+    margin-left: 275px;
+  }
+}
+
+.studioText {
+  color: white;
+  max-width: 589px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 300px;
+  margin-top: -70px;
+  p {
+    margin-bottom: 30px;
+  }
+  .studioIcons {
+    display: flex;
+    gap: 36px;
+    padding-bottom: 105px;
+    padding-top: 30px;
+  }
+}
+
+.studioIcon2 {
+  display: flex;
+  color: white;
+
+  p {
+    font-family: "Segoe Script", cursive;
+    color: red;
+  }
+}
+
+.studio-h1 {
+  color: white;
+  width: 1170px;
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 1px solid white;
+  margin-bottom: 40px;
+
+  h1 {
+    width: 700px;
+    margin: 50px auto;
+  }
+}
+
+.studio-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

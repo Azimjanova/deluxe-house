@@ -1,0 +1,73 @@
+.home-header {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  height: 75px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Центрирование хедера */
+  justify-content: space-between; /* Равномерное распределение элементов */
+  padding: 0 20px; /* Отступы по краям */
+  color: white;
+  background: black;
+  z-index: 1000;
+}
+
+body {
+  padding-top: 80px; /* Оставляем, чтобы контент не перекрывался хедером */
+}
+
+.home-content {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Расстояние между ссылками */
+}
+
+.home-content a {
+  text-decoration: none;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Уменьшаем расстояние подчеркивания */
+  width: 0;
+  left: 0;
+  height: 2px; /* Уменьшаем толщину линии */
+  background: white;
+  transition: width 0.3s ease-in-out; /* Плавный переход только для ширины */
+  border-radius: 5px;
+}
+
+a:hover {
+  color: white;
+  /* Убираем transform, так как на изображении нет поднятия текста */
+}
+
+a:hover:after {
+  width: 100%;
+}
+
+.textDelux {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 20px; /* Устанавливаем размер шрифта для логотипа */
+  display: flex;
+  align-items: center;
+}
+
+.numberIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}

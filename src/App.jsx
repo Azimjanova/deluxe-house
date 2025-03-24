@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { supabase } from "./supabase/index.js";
 import './App.css';
@@ -14,6 +15,13 @@ import Gallery from "./components/portfoli/gallery/Gallery.jsx";
 import Services from "./components/uslugi/section1/Services.jsx";
 
 
+=======
+import React from 'react';
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
+import ImageComponent from './components/ImageComponent';
+import RemontPage from "./pages/remont/RemontPage.jsx";
+>>>>>>> 95cc514a16e7a0a71775e6618c6fe6a9ca24a0f2
 
 const App = () => {
     const [projects, setProjects] = useState(null);
@@ -49,6 +57,7 @@ const App = () => {
     }
 
     return (
+<<<<<<< HEAD
         <DataProvider aboutUs={aboutUs} projects={projects}>
             <Router>
                 <Routes>
@@ -70,3 +79,15 @@ const App = () => {
 };
 
 export default App;
+=======
+        <Provider store={store}>
+            <ImageComponent />
+            <RemontPage/>
+        </Provider>
+    );
+};
+
+
+
+export default App;
+>>>>>>> 95cc514a16e7a0a71775e6618c6fe6a9ca24a0f2
