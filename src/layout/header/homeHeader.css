@@ -1,105 +1,307 @@
+/* Базовые стили */
 .home-header {
     display: flex;
-    width: 1440px;
     height: 75px;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
+    color: rgba(225, 222, 206, 1);
+    background: black;
+    padding: 0 20px;
     position: sticky;
     top: 0;
-    justify-content: space-between;
-    color: white;
-    margin: 0 auto;
-    background: black;
+    z-index: 9999;
 }
 
+.textDelux {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+}
 
 .home-content {
-    position: relative;
     display: flex;
     gap: 40px;
+}
 
-
-    a {
-        text-decoration: none;
-        position: relative;
-        font-family: 'Poppins', sans-serif;
-        font-size: 14px;
-        letter-spacing: 0.5px;
-    }
+.home-content a {
+    text-decoration: none;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: rgba(225, 222, 206, 1);
 }
 
 a:after {
     content: "";
     position: absolute;
     bottom: -10px;
-    width: 0;
     left: 0;
+    width: 0;
     height: 3px;
     background: white;
-    transition: 0.3s;
+    transition: width 0.3s ease;
     border-radius: 5px;
 }
 
 a:hover {
     color: white;
-    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-    transform: translateY(-5px);
-
+    transform: translateY(-2px);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 a:hover:after {
     width: 100%;
 }
 
-/*.cursor{*/
-/*    cursor: pointer;*/
-/*    width: 50px;*/
-/*    height: 2px;*/
-/*    background-color: #f9f9f9;*/
-/*    position: absolute;*/
-/*    margin-top: 30px;*/
-/*    transition: all 0.3s ease-in-out;*/
-/*    border-radius: 5px;*/
-/*}*/
-
-
-
-.textDelux {
-    display: grid;
-    font-family: "Playfair Display", serif; /* Шрифт */
-    font-weight: 600;
-}
-
 .numberIcon {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
-.imgHeader {
-    width: 1345px;
-    height: 683px;
-    margin-left: -72px;
-    margin-top: -704px;
+.numberIcon p {
+    font-size: 14px;
+    margin: 0;
 }
 
-.loco2{
-    margin-left: -50px;
+/* Стили для выпадающего меню */
+details summary {
+    cursor: pointer;
+    color: rgba(225, 222, 206, 1);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+details div {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+details div a {
+    color: black;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Стили для бургер-меню */
+.burger-menu {
+    display: none; /* Скрыто на десктопе */
+}
+
+.burger-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger-icon span {
+    background: white;
+    display: block;
+    height: 3px;
+    width: 100%;
     position: absolute;
+    transition: all 0.3s ease;
 }
 
-.home-header-left{
-    display: grid;
-    background-color: black;
-    color: white;
-    width: 96px;
-    height: 694px;
-    margin-left: -120px;
-    p{
-        writing-mode: vertical-lr; /* Вертикальное письмо, справа налево */
-        text-orientation: mixed; /* Ориентация текста */
-        color: rgba(225, 222, 206, 1);
-        margin-top: 100px;
-        margin-left: 50px;
+.burger-icon span:nth-child(1) {
+    top: 0;
+}
 
+.burger-icon span:nth-child(2) {
+    top: 8px;
+}
+
+.burger-icon span:nth-child(3) {
+    top: 16px;
+}
+
+.burger-icon.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.burger-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+/* Адаптивность */
+
+/* Планшеты (ширина экрана от 769px до 1024px) */
+@media (max-width: 1024px) {
+    .home-header {
+        padding: 0 15px;
+        height: 65px;
+    }
+
+    .home-content {
+        gap: 20px;
+    }
+
+    .home-content a {
+        font-size: 13px;
+    }
+
+    .textDelux img {
+        width: 60px !important;
+    }
+
+    .textDelux p {
+        font-size: 18px !important;
+        width: 160px !important;
+    }
+
+    .numberIcon p {
+        font-size: 13px;
+    }
+
+    .numberIcon img {
+        width: 24px;
+    }
+}
+
+/* Мобильные устройства (ширина экрана до 768px) */
+@media (max-width: 768px) {
+    .home-header {
+        height: 60px;
+        padding: 0 15px;
+        justify-content: space-between;
+    }
+
+    /* Скрываем стандартное меню и номер телефона */
+    .home-content,
+    .numberIcon {
+        display: none;
+    }
+
+    /* Показываем бургер-меню */
+    .burger-menu {
+        display: block;
+    }
+
+    /* Стили для открытого меню */
+    .home-content.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: black;
+        padding: 20px;
+        gap: 20px;
+        align-items: center;
+        z-index: 999;
+    }
+
+    .home-content.open a {
+        font-size: 16px;
+        color: rgba(225, 222, 206, 1);
+    }
+
+    /* Адаптация выпадающего меню */
+    details {
+        width: 100%;
+        text-align: center;
+    }
+
+    details summary {
+        padding: 5px 0;
+        font-size: 16px;
+    }
+
+    details[open] div {
+        position: static;
+        width: 100%;
+        background: black;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    details div a {
+        color: rgba(225, 222, 206, 1);
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .textDelux img {
+        width: 50px !important;
+    }
+
+    .textDelux p {
+        font-size: 16px !important;
+        width: 140px !important;
+    }
+}
+
+/* Очень маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+    .home-header {
+        padding: 0 10px;
+        height: 50px;
+    }
+
+    .textDelux img {
+        width: 40px !important;
+    }
+
+    .textDelux p {
+        font-size: 14px !important;
+        width: 120px !important;
+    }
+
+    .burger-icon {
+        width: 25px;
+        height: 18px;
+    }
+
+    .burger-icon span:nth-child(1) {
+        top: 0;
+    }
+
+    .burger-icon span:nth-child(2) {
+        top: 7px;
+    }
+
+    .burger-icon span:nth-child(3) {
+        top: 14px;
+    }
+
+    .burger-icon.open span:nth-child(1) {
+        top: 7px;
+    }
+
+    .burger-icon.open span:nth-child(3) {
+        top: 7px;
+    }
+
+    .home-content.open {
+        top: 50px;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .home-content.open a {
+        font-size: 14px;
+    }
+
+    details summary {
+        font-size: 14px;
+    }
+
+    details div a {
+        font-size: 12px;
+        padding: 8px;
     }
 }

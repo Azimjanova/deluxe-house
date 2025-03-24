@@ -1,0 +1,30 @@
+.remontCard {
+    color: white;
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 135px;
+    justify-content: center; /* Центрируем элементы */
+}
+
+.remontCard div {
+    width: 300px;
+    height: 286px;
+    font-family: Roboto, sans-serif;
+    text-align: left;
+}
+
+.remontCard h3 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.remontCard img {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+    width: 65px;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 299, 0.99)); /* Белое свечение */
+}
+

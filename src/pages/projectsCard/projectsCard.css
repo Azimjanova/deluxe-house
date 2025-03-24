@@ -1,61 +1,114 @@
-
-
-body{
+body {
     background: black;
 }
 
-
-.container{
+.container {
     width: 1170px;
-    margin:  auto;
-    /*border: 1px solid red;*/
+    margin: auto;
 }
 
-
-.img{
+.img {
     width: 370px;
-    height: 384px;
+    height: 385px;
+    object-fit: cover;  /* Чтобы изображение корректно масштабировалось */
+    transition: 0.3s ease-in-out;
 }
 
-.h1{
+.h1 {
     font-size: 40px;
     text-align: center;
     padding-bottom: 30px;
     border-bottom: 1px solid grey;
-    color: white;
+    color: rgba(225, 222, 206, 0.92);
     font-weight: 400;
     width: 1170px;
     margin: auto;
 }
 
-.name{
+.name {
     font-size: 16px;
     text-align: center;
-    color: white;
+    color: rgba(225, 222, 206, 0.92);
     letter-spacing: 1px;
-    line-height: 100%;
-    font-weight: 700;
-}
-
-.desc{
-    font-size: 14px;
-    color: white;
-    text-align: center;
-    letter-spacing: 1px;
-    line-height: 100%;
+    /*line-height: 100%;*/
     font-weight: 400;
+    position: absolute;
+    bottom: -7%;
+    width: 370px;
+    /*z-index: 2; !* Поверх изображения *!*/
 }
 
-.buttons{
-    margin: 100px auto;
+.desc {
+    font-size: 14px;
+    color: rgba(225, 222, 206, 0.92);
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    position: absolute;
+    bottom: -40px;  /* Расположение описания */
+    width: 370px;
+}
+
+.buttons {
+    margin-top: 100px;
     text-align: center;
     font-size: 16px;
     color: white;
-    button{
-        padding: 23px 53px;
-        border-radius: 10px;
-        border: 1px solid white;
-        background: transparent;
-        margin-left: 85px;
-    }
 }
+
+.buttons button {
+    padding: 23px 53px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background: transparent;
+    margin-left: 85px;
+}
+
+.buttons button:hover {
+    background-color: rgba(225, 222, 206, 0.92);
+    transition: 0.3s ease;
+    color: black;
+}
+
+
+.view-project {
+    color: rgba(225, 222, 206, 0.92);
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 25px;
+    opacity: 0; /* Скрыто по умолчанию */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .view-project {
+    opacity: 1;
+    font-size: 25px;
+}
+
+.card {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0); /* Прозрачный фон */
+    z-index: 1; /* Оверлей под текстом */
+    transition: background 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
+
+.card:hover .overlay {
+    background: rgba(0, 0, 0, 0.3); /* Затемнение при наведении */
+    backdrop-filter: blur(2px); /* Размытие */
+}
+
+/*.card:hover .img {*/
+/*    transform: scale(1.09);  !* Легкая анимация увеличения изображения при наведении *!*/
+/*}*/

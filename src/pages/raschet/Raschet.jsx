@@ -1,13 +1,12 @@
 import React from 'react';
-import './professional.css'
 
-const Professional = () => {
+const Raschet = () => {
     return (
-        <div className={'professional container  justify-between'}>
+        <div className={'professional container justify-between'}>
             <div className={'professionalText'}>
                 <h4>Коллекция</h4>
-                <h1>Профессиональный
-                    подход
+                <h1>Точный
+                    расчет
                 </h1>
                 <p>
                     В нашей команде работают дипломированные специалисты с большим опытом. Нами было реализовано большое количество объектов, поэтому для нас основной ценностью является ответственный подход к своей работе.
@@ -27,4 +26,4 @@ const Professional = () => {
     );
 };
 
-export default Professional;
+export default Raschet;

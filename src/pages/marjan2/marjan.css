@@ -1,0 +1,46 @@
+
+.marjanPage{
+    background:  rgba(211, 211, 211, 1);
+    /*background-repeat: no-repeat;*/
+    transform: rotate(20deg) scale(1.5);
+    max-width: 100%;
+    width: 100%;
+    height: 900px;
+    margin-top: 550px;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.marjan{
+    position: relative;
+    height: 1980px;
+/*margin-top: 700px;*/
+    .text-marjan{
+        width: 506px;
+        margin-left: auto;
+        /*border: 1px solid red;*/
+        margin-top: 700px;
+        font-family: Roboto, 'sans-serif';
+        font-weight: 400;
+        .marjanH1{
+            /*text-align: right;*/
+            font-size: 50px;
+            line-height: 70px;
+            letter-spacing: 0px;
+            margin-bottom: 30px;
+            margin-left: 110px;
+        }
+        p{
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+    }
+}
+
+.icon-marjan{
+    width: 698px;
+    position: absolute;
+    margin-top: 330px;
+    margin-left: -130px;
+}

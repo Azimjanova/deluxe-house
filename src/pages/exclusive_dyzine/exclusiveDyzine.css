@@ -1,10 +1,10 @@
 .exclusiveDyzine{
-    padding-top: 200px;
+    /*padding-top: 200px;*/
     display: flex;
     justify-content: space-between;
     color: rgba(225, 222, 206, 1);
-    margin-top: 950px;
-    background: black;
+    margin-top: -25px;
+    /*background: black;*/
     margin-bottom: 200px;
 }
 

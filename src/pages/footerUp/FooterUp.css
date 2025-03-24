@@ -1,0 +1,24 @@
+.container {
+    text-align: right;
+    margin-top: 100px;
+    padding: 0 20px;
+}
+
+/* Основной текст */
+.text-white {
+    color: white;
+    font-size: 20px;
+}
+
+/* Крупный текст */
+.highlight-text {
+    font-size: 40px;
+}
+
+/* Иконка */
+.footer-icon {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+}
+
